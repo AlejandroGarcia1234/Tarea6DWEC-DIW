@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Precursor</title>
+    <link rel="stylesheet" href="/styles/formStyle.css">
+    <link rel="stylesheet" href="/styles/normalize.css">
+    <link rel="shortcut icon" href="ovo.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="form-container">
+        <form id="formulario" action="/templates/envioPortal.html" method="get">
+            <h2>Contácta con Samos</h2>
+
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+            <input type="text" name="apellido" id="apellido" placeholder="Apellidos">
+            <input type="text" name="telefono" id="telefono" placeholder="Teléfono">
+            <input type="email" name="correo" id="correo" placeholder="Email">
+  
+            <textarea class="message" name="mensaje" id="mensaje" cols="25" rows="4"placeholder="Escriba su mensaje..."></textarea>
+
+            <input type="submit" name="enviar" id="enviar" value="Enviar">
+
+            <a href="/index.html" id="volver" class="Volver">Volver</a>
+
+            <ul  id="errores"></ul>
+        </form>
+    </div>
+
+    <script src="/scripts/index.js"></script>
+</body>
+</html>
