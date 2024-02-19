@@ -17,3 +17,34 @@ function navigate(direction) {
 
    galleryContainer.style.transform = `translateX(${offset}%)`;
 }
+
+document.querySelectorAll('.gallery-item img').forEach((image, index) => {
+    image.addEventListener('click', () => {
+        showImage(index);
+    });
+});
+
+document.querySelector('.close').addEventListener('click', () => {
+    closeImage();
+});
+
+document.getElementById('overlay').addEventListener('click', (event) => {
+    if (event.target === document.getElementById('overlay')) {
+        closeImage();
+    }
+});
+
+function showImage(index) {
+    const imageUrl = document.querySelectorAll('.gallery-item img')[index].src;
+    const modalImage = document.getElementById('modal-image');
+    modalImage.src = imageUrl;
+
+    const overlay = document.getElementById('overlay');
+    overlay.style.display = 'flex';
+}
+
+function closeImage() {
+    const overlay = document.getElementById('overlay');
+    overlay.style.display = 'none';
+}
+
