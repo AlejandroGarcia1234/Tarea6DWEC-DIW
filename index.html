@@ -36,11 +36,17 @@
 
     <section class="hero-container">
         <div class="hero-image">
-            <img src="/assets/img/jak.jpg" alt="jak">
+            <video autoplay muted loop>
+                <source src="video/The Jak and Daxter Collection _ Launch Trailer _ PS4.mp4" type="video/mp4">
+                <source src="video/The Jak and Daxter Collection _ Launch Trailer _ PS4.ogg" type="video/ogg">
+                <source src="video/The Jak and Daxter Collection _ Launch Trailer _ PS4.webm" type="video/webm">
+            </video>
             </div>
             <div class="hero-logo">
             </div>
-        </div>
+            <button id="dark-mode-toggle">
+                <img src="/assets/img/night-mode.png" alt="Dark Mode">
+            </button>
     </section>
 
     <section class="body-text">
@@ -125,5 +131,6 @@
 </body>
 
 <script src="/scripts/header.js"></script>
+<script src="/scripts/darkMode.js"></script>
 
 </html>
