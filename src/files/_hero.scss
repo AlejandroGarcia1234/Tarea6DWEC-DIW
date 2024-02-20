@@ -1,0 +1,125 @@
+.hero-container {
+    height: var(--altura-hero-video);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
+    position: relative;
+}
+
+.hero-container::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(224, 185, 29, 0.849), rgba(238, 111, 14, 0.921));
+}
+
+.hero-video {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+	width: auto;
+    opacity: 0.7;
+    position: relative;
+	
+}
+
+video{
+	width: 100%;
+}
+
+.hero-video::before {
+    content: '';
+    position: absolute;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+}
+
+.hero-logo {
+    background-image: url('/assets/img/jaklogo.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 700px;
+    height: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.body-text {
+    font-size: var(--tamano-fuente-body);
+    margin-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    padding: 3rem;
+}
+
+
+@media screen and (max-width: 1024px) {
+	:root {
+		--altura-hero-video: 70vh;
+		--tamano-fuente-body: 1.8rem;
+		--tamano-fuente-titulo-card: 1.3rem;
+	}
+	.hero-container {
+		width: 100%;
+	}
+	.hero-video {
+		width: auto;
+		height: auto;
+		object-fit: cover;
+	}
+	video{
+		width: auto;
+		height: auto;
+		object-fit: cover;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	:root {
+		--altura-hero-video: 60vh;
+		--tamano-fuente-body: 1.5rem;
+		--tamano-fuente-titulo-card: 1.2rem;
+	}
+	.hero-container {
+		width: 100%;
+	}
+	.hero-video {
+		width: auto;
+		height: auto;
+		object-fit: cover;
+	}
+	video{
+		width: auto;
+		height: auto;
+		object-fit: cover;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	:root {
+		--altura-hero-video: 50vh;
+		--tamano-fuente-body: 1.2rem;
+		--tamano-fuente-titulo-card: 1rem;
+	}
+	.hero-container {
+		width: 100%;
+	}
+	.hero-video {
+		width: auto;
+		height: auto;
+		object-fit: cover;
+	}
+	video{
+		width: auto;
+		height: auto;
+		object-fit: cover;
+	}
+}
